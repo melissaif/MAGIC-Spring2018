@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+  Your Userneme <?php echo $_POST["username"]; ?><br>
+  Your password is: <?php echo $_POST["username"]; ?>
+
+  <h1>Account Prototype</h1>
+  <p id="demo"></p>
+
+  <script>
+
+    document.getElementById("demo").innerHTML = "My First JavaScript";
+    var data = 0;
+    var qrdata = [data];
+    var found = false;
+    for (var i = 0; i <qrdata.length; i++) { /*0<1 0,1  */
+      if (qrdata.indexOf(data) > -1) {
+          found = true;
+          data = Math.random();
+          qrdata.push(data+"-");
+          break;
+      }
+      else{
+        qrdata.push(data);
+      }
+    }
+    document.write(qrdata);
+
+  </script>
+
+</body>
+</html>
