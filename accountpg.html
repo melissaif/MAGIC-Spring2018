@@ -16,16 +16,17 @@
   <p id="demo"></p>
 
   <script>
-    //hello!
+
     document.getElementById("demo").innerHTML = "My First JavaScript";
     var data = 0;
     var qrdata = [data];
+    qrdata.length = 5;
     var found = false;
     for (var i = 0; i <qrdata.length; i++) { /*0<1 0,1  */
       if (qrdata.indexOf(data) > -1) {
           found = true;
           data = Math.random();
-          qrdata.push(data+"-");
+          qrdata[i] = data;
           break;
       }
       else{
