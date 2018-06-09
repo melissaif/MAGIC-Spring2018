@@ -27,10 +27,9 @@
           found = true;
           data = Math.random();
           qrdata[i] = data;
-          break;
       }
       else{
-        qrdata.push(data);
+        qrdata[i] = data;
       }
     }
     document.write(qrdata);
